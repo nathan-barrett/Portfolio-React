@@ -2,38 +2,27 @@ import React from 'react';
 import { css } from 'emotion';
 
 
-const Hexagon = css({
-  overflow: 'hidden',
-  visibility: 'hidden',
-  transform: 'rotate(120deg)',
-  width: '400',
+const svgStyle = css({
+  filter: 'drop-shadow(rgba(255, 255, 255, 0.5) 0px 0px 10px)',
   height: 200,
-  margin: '0 0 0 -80px',
-
-});
-const HexagonIn1 = css({
-  overflow: 'hidden',
-  width: '100%',
-  height: '100%',
-  transform: 'rotate(-60deg)',
-});
-const HexagonIn2 = css({
-  width: '100%',
-  height: '100%',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: '50%',
-  backgroundImage: 'url(http://placekitten.com/240/240)',
-  visibility: 'visible',
-  border: '8px solid grey',
-  transform: 'rotate(-60deg)',
+  width: 174,
+  marginTop: 10,
 });
 
 const AboutImage = () => (
-  <div className={Hexagon}>
-    <div className={HexagonIn1}>
-      <div className={HexagonIn2} />
-    </div>
-  </div>
+  <svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewbox="0 0 173.20508075688772 200"
+    className={svgStyle}
+  >
+    <defs>
+      <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+        <image height="1" width="1" preserveAspectRatio="none" xlinkHref="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/aboutImage.jpg?raw=true" />
+      </pattern>
+    </defs>
+    <path fill="url(#pattern1)" d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" />
+  </svg>
 );
 
 export default AboutImage;

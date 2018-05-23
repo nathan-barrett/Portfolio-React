@@ -8,7 +8,7 @@ const HeaderName = styled('h1')({
   fontSize: '2.5em',
   marginTop: 5,
   marginBottom: 5,
-  fontWeight: '600',
+  fontWeight: 'bold',
   textAlign: 'center',
 });
 

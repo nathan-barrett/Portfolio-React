@@ -6,8 +6,8 @@ import AboutImage from '../components/AboutImage';
 
 const BodyContainer = styled('div')({
   display: 'flex',
-  // justifyContent: 'center',
   alignItems: 'center',
+  flexDirection: 'column',
   p: {
     color: 'purple',
   },
@@ -15,8 +15,8 @@ const BodyContainer = styled('div')({
 
 const Body = () => (
   <BodyContainer>
-    <AboutText />
     <AboutImage />
+    <AboutText />
   </BodyContainer>
 );
 
