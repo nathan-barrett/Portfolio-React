@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from 'emotion';
+import { Link } from 'react-router-dom';
 
 const NavContainer = css({
   listStyleType: 'none',
@@ -11,13 +12,15 @@ const NavContainer = css({
     color: 'grey',
     paddingLeft: 5,
     paddingRight: 5,
+    fontFamily: '"Source Sans Pro", sans-serif',
   },
 });
 
 const Navbar = () => (
   <ul className={NavContainer}>
-    <li>about</li>
-    <li>portfolio</li>
+    <li><Link to="/">about</Link></li>
+    <li><Link to="/skills">skills</Link></li>
+    <li><Link to="/portfolio">portfolio</Link></li>
     <li>contact</li>
   </ul>
 );
