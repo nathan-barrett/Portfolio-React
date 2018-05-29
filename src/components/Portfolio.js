@@ -15,6 +15,8 @@ const sectionStyle = css({
 const ProjectItem = styled('div')({
   width: '80%',
   backgroundColor: 'grey',
+  background: 'center no-repeat url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true")',
+  backgroundSize: 'contain',
   height: 200,
   display: 'flex',
   justifyContent: 'center',
@@ -23,6 +25,9 @@ const ProjectItem = styled('div')({
   marginBottom: 10,
   '&:hover': {
     backgroundColor: 'purple',
+  },
+  '&: first-child': {
+    background: 'url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true")',
   },
   h3: {
 
@@ -35,22 +40,34 @@ const Portfolio = () => (
     <SectionText
       text="Portfolio"
     />
-    <ProjectItem>
+    <ProjectItem
+      background="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true"
+    >
       <h3>For Dogs Only</h3>
     </ProjectItem>
-    <ProjectItem>
+    <ProjectItem
+      background="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true"
+    >
       <h3>Pokemon JS</h3>
     </ProjectItem>
-    <ProjectItem>
+    <ProjectItem
+      background="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true"
+    >
       <h3>Animal Town</h3>
     </ProjectItem>
-    <ProjectItem>
+    <ProjectItem
+      background="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true"
+    >
       <h3>Stardew Gallery</h3>
     </ProjectItem>
-    <ProjectItem>
+    <ProjectItem
+      background="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true"
+    >
       <h3>Zoo Keeper</h3>
     </ProjectItem>
-    <ProjectItem>
+    <ProjectItem
+      background="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true"
+    >
       <h3>Tamagatchi</h3>
     </ProjectItem>
   </div>
