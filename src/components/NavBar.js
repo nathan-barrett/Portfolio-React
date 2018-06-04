@@ -19,9 +19,8 @@ const NavContainer = css({
 const Navbar = () => (
   <ul className={NavContainer}>
     <li><Link to="/">about</Link></li>
-    <li><Link to="/skills">skills</Link></li>
     <li><Link to="/portfolio">portfolio</Link></li>
-    <li>contact</li>
+    <li><Link to="/contact">contact</Link></li>
   </ul>
 );
 

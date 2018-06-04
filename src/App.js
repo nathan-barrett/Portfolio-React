@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'react-emotion';
 import Body from './containers/Body';
 import Header from './containers/Header';
 

@@ -16,12 +16,13 @@ const sectionStyle = css({
   marginBottom: 50,
 });
 
+
 const flipCardStyle = css({
   width: '80%',
   height: 200,
   marginTop: 10,
   marginBottom: 10,
-  // filter: 'drop-shadow(15px 15px 5px rgba(191, 192, 192))',
+  filter: 'drop-shadow(15px 15px 5px rgba(191, 192, 192))',
 });
 const angleStyle = css({
   position: 'absolute',
@@ -54,7 +55,7 @@ const ProjectItemBack = styled('div')({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  // backgroundColor: 'rgba(191, 192, 192, .2)',
+  backgroundColor: 'rgba(191, 192, 192, .2)',
   p: {
     width: '80%',
     textAlign: 'center',
@@ -74,40 +75,81 @@ class Portfolio extends Component {
     };
   }
   handle1Hover = () => {
-    this.setState({ Project1bool: !this.state.Project1bool });
+    if (!this.state.Project1bool) {
+      setTimeout(() => {
+        this.setState({
+          Project1bool: true, Project2bool: false, Project3bool: false, Project4bool: false, Project5bool: false, Project6bool: false,
+        });
+      }, 500);
+    }
   }
   handle2Hover = () => {
-    this.setState({ Project2bool: !this.state.Project2bool });
+    if (!this.state.Project2bool) {
+      setTimeout(() => {
+        this.setState({
+          Project2bool: true, Project1bool: false, Project3bool: false, Project4bool: false, Project5bool: false, Project6bool: false,
+        });
+      }, 500);
+    }
   }
   handle3Hover = () => {
-    this.setState({ Project3bool: !this.state.Project3bool });
+    if (!this.state.Project3bool) {
+      setTimeout(() => {
+        this.setState({ Project3bool: true });
+      }, 500);
+    }
   }
   handle4Hover = () => {
-    this.setState({ Project4bool: !this.state.Project4bool });
+    if (!this.state.Project4bool) {
+      setTimeout(() => {
+        this.setState({ Project4bool: true });
+      }, 500);
+    }
   }
   handle5Hover = () => {
-    this.setState({ Project5bool: !this.state.Project5bool });
+    if (!this.state.Project5bool) {
+      setTimeout(() => {
+        this.setState({ Project5bool: true });
+      }, 500);
+    }
   }
   handle6Hover = () => {
-    this.setState({ Project6bool: !this.state.Project6bool });
+    if (!this.state.Project6bool) {
+      setTimeout(() => {
+        this.setState({ Project6bool: true });
+      }, 500);
+    }
   }
   handleFlip = () => {
-    this.setState({ Project1bool: !this.state.Project1bool });
+    setTimeout(() => {
+      this.setState({ Project1bool: false });
+    }, 200);
   }
   handleFlip2 = () => {
-    this.setState({ Project2bool: !this.state.Project2bool });
+    setTimeout(() => {
+      this.setState({ Project2bool: false });
+    }, 200);
   }
   handleFlip3 = () => {
-    this.setState({ Project3bool: !this.state.Project3bool });
+    setTimeout(() => {
+      this.setState({ Project3bool: false });
+    }, 200);
   }
   handleFlip4 = () => {
-    this.setState({ Project4bool: !this.state.Project4bool });
+    setTimeout(() => {
+      this.setState({ Project4bool: false });
+    }, 200);
   }
   handleFlip5 = () => {
-    this.setState({ Project5bool: !this.state.Project5bool });
+    setTimeout(() => {
+      this.setState({ Project5bool: false });
+    }, 200);
   }
+
   handleFlip6 = () => {
-    this.setState({ Project6bool: !this.state.Project6bool });
+    setTimeout(() => {
+      this.setState({ Project6bool: false });
+    }, 200);
   }
   render() {
     return (
@@ -118,7 +160,6 @@ class Portfolio extends Component {
         <div
           className={flipCardStyle}
           onMouseEnter={this.handle1Hover}
-          // onMouseLeave={this.handle1Hover}
         >
           <ReactCardFlip
             isFlipped={this.state.Project1bool}
@@ -139,9 +180,12 @@ class Portfolio extends Component {
               />
               <h4>For Dogs Only</h4>
               <p>A mobile application made with React Native where users can set up doggie dates.</p>
-              <Button
-                content="View Repository"
-              />
+              <a href="https://github.com/nathan-barrett/ForDogsOnly" target="_blank" rel="noopener noreferrer">
+                <Button
+                  color="yellow"
+                  content="View Repository"
+                />
+              </a>
             </ProjectItemBack>
           </ReactCardFlip>
         </div>
@@ -168,7 +212,13 @@ class Portfolio extends Component {
                 onClick={this.handleFlip2}
               />
               <h4>PokemonJS</h4>
-              <p>A mobile application made with React Native where users can set up doggie dates.</p>
+              <p>An Angular 5 application where the user can play a mini-pokemon game.</p>
+              <a href="https://github.com/nathan-barrett/PokemonJS" target="_blank" rel="noopener noreferrer">
+                <Button
+                  color="yellow"
+                  content="View Repository"
+                />
+              </a>
             </ProjectItemBack>
           </ReactCardFlip>
         </div>
@@ -195,7 +245,13 @@ class Portfolio extends Component {
                 onClick={this.handleFlip3}
               />
               <h4>Animal Town</h4>
-              <p>A mobile application made with React Native where users can set up doggie dates.</p>
+              <p>A character creater made using HTML canvas and SCSS</p>
+              <a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">
+                <Button
+                  color="yellow"
+                  content="View Repository"
+                />
+              </a>
             </ProjectItemBack>
           </ReactCardFlip>
         </div>
@@ -221,7 +277,14 @@ class Portfolio extends Component {
                 size={25}
                 onClick={this.handleFlip4}
               />
-              <h4>Stardew Valley's Most Wanted</h4>
+              <h4>Stardew Valley&apos;s Most Wanted</h4>
+              <p>A Stardew Valley blog made using SCSS</p>
+              <a href="https://github.com/nathan-barrett/prison" target="_blank" rel="noopener noreferrer">
+                <Button
+                  color="yellow"
+                  content="View Repository"
+                />
+              </a>
             </ProjectItemBack>
           </ReactCardFlip>
         </div>
@@ -248,6 +311,13 @@ class Portfolio extends Component {
               />
 
               <h4>Zoo Keeper</h4>
+              <p>An Angular 5 tracking zoo Animals with CRUD functionality.</p>
+              <a href="https://github.com/nathan-barrett/js-week3" target="_blank" rel="noopener noreferrer">
+                <Button
+                  content="View Repository"
+                  color="yellow"
+                />
+              </a>
             </ProjectItemBack>
           </ReactCardFlip>
         </div>
@@ -273,6 +343,14 @@ class Portfolio extends Component {
                 onClick={this.handleFlip6}
               />
               <h4>React Tamagatchi</h4>
+              <p>A React application featuring Geudetama as a Tamagatchi
+              </p>
+              <a href="https://github.com/nathan-barrett/tomogatchi-react" target="_blank" rel="noopener noreferrer">
+                <Button
+                  color="yellow"
+                  content="View Repository"
+                />
+              </a>
             </ProjectItemBack>
           </ReactCardFlip>
         </div>

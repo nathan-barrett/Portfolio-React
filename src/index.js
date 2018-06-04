@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'emotion';
 import { BrowserRouter } from 'react-router-dom';
-import 'semantic-ui-css/semantic.min.css';
 
 
 import App from './App';
