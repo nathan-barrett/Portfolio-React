@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { css } from 'emotion';
 import styled from 'react-emotion';
 // import ReactCardFlip from 'react-card-flip';
-// import Angle from 'react-icons/lib/fa/angle-double-left';
+// import Arrow from '@fortawesome/fontawesome-free-solid/faChevronUp';
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import SectionText from './SectionText';
 // import MyButton from './Button';
 
@@ -22,108 +23,123 @@ const sectionStyle = css({
   },
 });
 
-
-const ProjectItem = styled('div')({
+const ImageContainer = styled('div')(props => ({
   width: '80%',
-  height: 'auto',
+  height: 300,
+  borderRadius: 16,
+  backgroundImage: props.background,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  overflow: 'hidden',
+  marginBottom: 20,
+  '&:first-child': {
+    marginTop: 20,
+  },
   img: {
     maxWidth: '100%',
     maxHeight: '100%',
+    width: '100%',
   },
-  '@media (min-width: 500px)': {
-    height: 350,
+}));
+
+const TextContainer = styled('div')(props => ({
+  position: 'relative',
+  width: '100%',
+  height: 300,
+  borderTopLeftRadius: 16,
+  borderTopRightRadius: 16,
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#90D3E3',
+  transform: 'translateY(100%) translateY(-100px) translateZ(0)',
+  transition: 'transform 0.5s ease-out',
+  padding: 30,
+  paddingBottom: 16,
+  h2: {
+    marginLeft: 15,
+    marginTop: 0,
+    marginBottom: 0,
+    padding: 0,
+    color: 'white',
+  },
+  p: {
+    marginLeft: 15,
+    color: 'grey',
+  },
+  '&:before': {
+    zIndex: -1,
+    display: 'block',
+    position: 'absolute',
+    content: '" "',
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden',
+    backgroundImage: props.background,
+    backgroundSize: 'cover',
+    filter: 'blur(25px)',
+    opacity: 0.8,
+    transform: 'translateY(100%) translateY(-100px) translateZ(0)',
+    transition: 'transform 0.5s ease-out',
+  },
+  '&: hover': {
+    transform: 'translateY(0) translateZ(0)',
+  },
+}));
+
+const hiddenText = css({
+  paddingTop: 30,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  h4: {
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  button: {
+    position: 'relative',
+    transition: 'all 0.2s',
+    width: '80%',
+    borderRadius: 16,
+    backgroundColor: 'transparent',
+    color: 'white',
+    height: 40,
+    border: '2px solid white',
+    marginTop: 25,
+    outline: 'none',
+    a: {
+      color: 'inherit',
+    },
+    '&:before, &:after': {
+      backgroundColor: 'white',
+      borderRadius: 10,
+      content: '" "',
+      position: 'absolute',
+      zIndex: -1,
+    },
+    '&:hover': {
+      color: '#90D3E3',
+      '&:after': {
+        height: '100%',
+        left: 0,
+        top: 0,
+        width: '100%',
+      },
+    },
+    '&:after': {
+      transition: 'all 0.3s',
+      height: 0,
+      left: '50%',
+      top: '50%',
+      width: 0,
+    },
+
   },
 });
 
-class Portfolio extends Component {
-  constructor() {
-    super();
-    this.state = {
-      Project1bool: false,
-      Project2bool: false,
-      Project3bool: false,
-      Project4bool: false,
-      Project5bool: false,
-      Project6bool: false,
-    };
-  }
-  handle1Hover = () => {
-    if (!this.state.Project1bool) {
-      setTimeout(() => {
-        this.setState({
-          Project1bool: true, Project2bool: false, Project3bool: false, Project4bool: false, Project5bool: false, Project6bool: false,
-        });
-      }, 500);
-    }
-  }
-  handle2Hover = () => {
-    if (!this.state.Project2bool) {
-      setTimeout(() => {
-        this.setState({
-          Project2bool: true, Project1bool: false, Project3bool: false, Project4bool: false, Project5bool: false, Project6bool: false,
-        });
-      }, 500);
-    }
-  }
-  handle3Hover = () => {
-    if (!this.state.Project3bool) {
-      setTimeout(() => {
-        this.setState({ Project3bool: true });
-      }, 500);
-    }
-  }
-  handle4Hover = () => {
-    if (!this.state.Project4bool) {
-      setTimeout(() => {
-        this.setState({ Project4bool: true });
-      }, 500);
-    }
-  }
-  handle5Hover = () => {
-    if (!this.state.Project5bool) {
-      setTimeout(() => {
-        this.setState({ Project5bool: true });
-      }, 500);
-    }
-  }
-  handle6Hover = () => {
-    if (!this.state.Project6bool) {
-      setTimeout(() => {
-        this.setState({ Project6bool: true });
-      }, 500);
-    }
-  }
-  handleFlip = () => {
-    setTimeout(() => {
-      this.setState({ Project1bool: false });
-    }, 200);
-  }
-  handleFlip2 = () => {
-    setTimeout(() => {
-      this.setState({ Project2bool: false });
-    }, 200);
-  }
-  handleFlip3 = () => {
-    setTimeout(() => {
-      this.setState({ Project3bool: false });
-    }, 200);
-  }
-  handleFlip4 = () => {
-    setTimeout(() => {
-      this.setState({ Project4bool: false });
-    }, 200);
-  }
-  handleFlip5 = () => {
-    setTimeout(() => {
-      this.setState({ Project5bool: false });
-    }, 200);
-  }
 
-  handleFlip6 = () => {
-    setTimeout(() => {
-      this.setState({ Project6bool: false });
-    }, 200);
-  }
+class Portfolio extends Component {
   render() {
     return (
       <div>
@@ -131,9 +147,90 @@ class Portfolio extends Component {
           text="Portfolio"
         />
         <div className={sectionStyle}>
-          <ProjectItem>
-            <img src="https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true" alt="For Dogs Only" />
-          </ProjectItem>
+          <ImageContainer
+            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true")'
+          >
+            <TextContainer
+              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true")'
+            >
+              <h2>For Dogs Only</h2>
+              <p>React Native / Redux</p>
+              <div className={hiddenText}>
+                <h4>A mobile application made with React Native where the user can set up doggie dates with other users.</h4>
+                <button><a href="https://github.com/nathan-barrett/ForDogsOnly" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+              </div>
+            </TextContainer>
+          </ImageContainer>
+          <ImageContainer
+            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/portfolio3.png?raw=true")'
+          >
+            <TextContainer
+              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/portfolio3.png?raw=true")'
+            >
+              <h2>Plantigotchi</h2>
+              <p>C++ with Arduino</p>
+              <div className={hiddenText}>
+                <h4>A mobile application made with React Native where the user can set up doggie dates with other users.</h4>
+                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+              </div>
+            </TextContainer>
+          </ImageContainer>
+          <ImageContainer
+            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/battle.png?raw=true")'
+          >
+            <TextContainer
+              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/battle.png?raw=true")'
+            >
+              <h2>Pokemon JS</h2>
+              <p>Angular 5</p>
+              <div className={hiddenText}>
+                <h4>An application made in Angular where the user can play a pokemon simulator</h4>
+                <button><a href="https://github.com/nathan-barrett/PokemonJS" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+              </div>
+            </TextContainer>
+          </ImageContainer>
+          <ImageContainer
+            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Portfolio.png?raw=true")'
+          >
+            <TextContainer
+              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Portfolio.png?raw=true")'
+            >
+              <h2>Animal Town</h2>
+              <p>SCSS / CSS</p>
+              <div className={hiddenText}>
+                <h4>Web application created using HTML canvas and SCSS. Character creator like Animal Crossing.</h4>
+                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+              </div>
+            </TextContainer>
+          </ImageContainer>
+          <ImageContainer
+            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/zoo.png?raw=true")'
+          >
+            <TextContainer
+              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/zoo.png?raw=true")'
+            >
+              <h2>Zoo Zone</h2>
+              <p>Angular 5</p>
+              <div className={hiddenText}>
+                <h4>Web application using Angualr with CRUD functionality - where user can track zoo animals.</h4>
+                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+              </div>
+            </TextContainer>
+          </ImageContainer>
+          <ImageContainer
+            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Tomagatchi.png?raw=true")'
+          >
+            <TextContainer
+              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Tomagatchi.png?raw=true")'
+            >
+              <h2>Guede-Tomagatchi</h2>
+              <p>React</p>
+              <div className={hiddenText}>
+                <h4>Web aplication where user takes care of a Tomagatchi using React.</h4>
+                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+              </div>
+            </TextContainer>
+          </ImageContainer>
         </div>
       </div>
     );

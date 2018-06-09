@@ -14,6 +14,7 @@ const FooterContainer = styled('div')({
   left: 0,
   width: '100%',
   borderTop: '2px solid #ff4500',
+  backgroundColor: 'white',
   paddingLeft: 10,
   paddingRight: 10,
 });

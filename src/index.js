@@ -12,8 +12,6 @@ injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
   * {
     box-sizing: border-box;
-    margin-left: 2px;
-    margin-right: 2px;
   }
   `;
   /* eslint-disable */
