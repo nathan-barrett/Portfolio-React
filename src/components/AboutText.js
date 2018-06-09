@@ -5,29 +5,39 @@ import Circle from '@fortawesome/fontawesome-free-solid/faCircle';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const TextContainer = styled('div')({
+  marginTop: 15,
   width: '80%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  marginTop: 5,
+  marginBottom: 50,
   p: {
     marginBottom: 5,
     color: 'grey',
+    fontSize: '1.3em',
     textAlign: 'center',
     fontFamily: '"Source Sans Pro", sans-serif',
     '&:last-child': {
       marginTop: 10,
     },
     '@media (min-width: 500px)': {
-      fontSize: '1.8em',
-      marginBottom: 10,
+      fontSize: '2.1em',
+      marginBottom: 2,
     },
+  },
+  '@media (min-width: 500px)': {
+    width: '50%',
   },
 });
 
 const icon = css({
-  fontSize: '6px',
-  marginBottom: '2px',
+  fontSize: '10px',
+  marginLeft: 4,
+  marginRight: 4,
+  marginBottom: 1,
+  '@media (min-width: 500px)': {
+    marginBottom: 4,
+  },
 });
 const skillList = css({
   fontSize: 14,
@@ -63,7 +73,6 @@ const AboutText = () => (
         NodeJS
           <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
     </p>
-    <p>Wanna work together? Let&apos;s grab a coffee!</p>
   </TextContainer>
 );
 

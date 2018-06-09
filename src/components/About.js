@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from 'emotion';
 
 import AboutText from '../components/AboutText';
-import AboutImage from '../components/AboutImage';
+// import AboutImage from '../components/AboutImage';
 import SectionText from '../components/SectionText';
 
 const sectionStyle = css({
@@ -19,7 +19,6 @@ const About = () => (
     <SectionText
       text="About"
     />
-    <AboutImage />
     <AboutText />
   </div>
 );

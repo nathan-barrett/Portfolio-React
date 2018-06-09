@@ -6,7 +6,7 @@ const imgStyle = css({
   maxWidth: '100%',
   height: 180,
   borderRadius: 80,
-  '@media (min-width: 500px)': {
+  '@media (min-width: 600px)': {
     height: 250,
   },
 });

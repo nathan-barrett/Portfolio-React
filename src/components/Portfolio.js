@@ -35,6 +35,15 @@ const ImageContainer = styled('div')(props => ({
   '&:first-child': {
     marginTop: 20,
   },
+  '@media (min-width: 600px)': {
+    width: '45%',
+    '&:first-child': {
+      marginTop: 0,
+    },
+  },
+  '@media (min-width: 1200px)': {
+    width: '28%',
+  },
   img: {
     maxWidth: '100%',
     maxHeight: '100%',
@@ -162,16 +171,16 @@ class Portfolio extends Component {
             </TextContainer>
           </ImageContainer>
           <ImageContainer
-            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/portfolio3.png?raw=true")'
+            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/plantigotchi.jpg?raw=true")'
           >
             <TextContainer
-              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/portfolio3.png?raw=true")'
+              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/plantigotchi.jpg?raw=true")'
             >
               <h2>Plantigotchi</h2>
               <p>C++ with Arduino</p>
               <div className={hiddenText}>
-                <h4>A mobile application made with React Native where the user can set up doggie dates with other users.</h4>
-                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+                <h4>An IOT arduino application that tracks house plant moisture level for the Women Who Code 2018 Hackathon. Recived 2nd place.</h4>
+                <button><a href="https://github.com/pnw-cha/plantigotchi" target="_blank" rel="noopener noreferrer">View Repository</a></button>
               </div>
             </TextContainer>
           </ImageContainer>

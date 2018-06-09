@@ -22,6 +22,9 @@ const ContactContainer = styled('div')({
   h3: {
     color: 'grey',
     marginBottom: 40,
+    '@media (min-width: 500px)': {
+      fontSize: '2em',
+    },
   },
   a: {
     color: 'inherit',
@@ -41,11 +44,20 @@ const IconRow = styled('div')({
   display: 'flex',
   justifyContent: 'space-between',
   marginBottom: 30,
+  '@media (min-width: 600px)': {
+    justifyContent: 'center',
+  },
   div: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     width: '50%',
+    '@media (min-width: 600px)': {
+      width: '30%',
+    },
+    '@media (min-width: 1000px)': {
+      width: '25%',
+    },
     p: {
       fontSize: 12,
       color: 'grey',

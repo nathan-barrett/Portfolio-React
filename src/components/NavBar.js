@@ -10,6 +10,7 @@ const NavContainer = css({
   marginTop: 5,
   li: {
     color: 'grey',
+    fontSize: '1.2em',
     paddingLeft: 5,
     paddingRight: 5,
     fontFamily: '"Source Sans Pro", sans-serif',

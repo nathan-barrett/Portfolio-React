@@ -8,7 +8,7 @@ const HeaderContainer = styled('div')({
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
-  borderBottom: '2px solid #ff4500',
+  borderBottom: '2px solid #90D3E3',
 });
 
 const Header = () => (

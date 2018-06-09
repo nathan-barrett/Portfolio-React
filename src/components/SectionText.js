@@ -6,7 +6,8 @@ const Section = styled('div')({
   display: 'flex',
   alignSelf: 'flex-start',
   h2: {
-    color: '#ff4500',
+    color: '#90D3E3',
+    marginLeft: 25,
     fontFamily: '"Raleway", sans-serif',
     marginBottom: 2,
     marginTop: 2,

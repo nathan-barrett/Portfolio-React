@@ -13,7 +13,7 @@ const FooterContainer = styled('div')({
   bottom: 0,
   left: 0,
   width: '100%',
-  borderTop: '2px solid #ff4500',
+  borderTop: '2px solid #90D3E3',
   backgroundColor: 'white',
   paddingLeft: 10,
   paddingRight: 10,
@@ -27,7 +27,7 @@ const IconContainer = styled('div')({
   alignItems: 'center',
   h1: {
     fontFamily: '"Raleway", sans-serif',
-    color: '#ff4500',
+    color: '#90D3E3',
     marginBottom: 0,
   },
 });

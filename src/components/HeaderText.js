@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { Link } from 'react-router-dom';
+
 
 const HeaderName = styled('h1')({
-  color: '#ff4500',
+  color: '#90D3E3',
   fontFamily: '"Raleway", sans-serif',
   letterSpacing: '1px',
   fontSize: '2.5em',
@@ -16,7 +18,7 @@ const HeaderName = styled('h1')({
 });
 
 const HeaderText = () => (
-  <HeaderName>Nathan Barrett</HeaderName>
+  <Link to="/"><HeaderName>Nathan Barrett</HeaderName></Link>
 );
 
 export default HeaderText;
