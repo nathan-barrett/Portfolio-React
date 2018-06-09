@@ -11,6 +11,9 @@ const Section = styled('div')({
     marginBottom: 2,
     marginTop: 2,
     fontSize: '2em',
+    '@media (min-width: 500px)': {
+      fontSize: '3em',
+    },
   },
 });
 

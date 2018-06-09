@@ -18,6 +18,10 @@ const TextContainer = styled('div')({
     '&:last-child': {
       marginTop: 10,
     },
+    '@media (min-width: 500px)': {
+      fontSize: '1.8em',
+      marginBottom: 10,
+    },
   },
 });
 
@@ -26,7 +30,7 @@ const icon = css({
   marginBottom: '2px',
 });
 const skillList = css({
-  fontSize: 12,
+  fontSize: 14,
 });
 
 
@@ -37,27 +41,27 @@ const AboutText = () => (
     <p>When I&apos;m not coding I love to read (both novels and comic books) as well as running around beautiful Portland.
     </p>
     <p className={skillList}>
-      <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+      <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
         React
-        <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+        <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
         React Native
-        <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+        <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
         CSS/SCSS
-        <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+        <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
       <br />
-      <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+      <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
         Javascript/jQuery
-        <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+        <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
         Git
-        <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+        <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
       <br />
-      <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+      <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
         ES6
-        <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+        <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
           Angular 5
-        <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+        <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
         NodeJS
-          <FontAwesomeIcon className={icon} color="#ff4500" icon={Circle} />
+          <FontAwesomeIcon className={icon} color="#4183C4" icon={Circle} />
     </p>
     <p>Wanna work together? Let&apos;s grab a coffee!</p>
   </TextContainer>

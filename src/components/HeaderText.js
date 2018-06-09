@@ -6,10 +6,13 @@ const HeaderName = styled('h1')({
   fontFamily: '"Raleway", sans-serif',
   letterSpacing: '1px',
   fontSize: '2.5em',
-  marginTop: 5,
+  paddingTop: 20,
   marginBottom: 5,
   fontWeight: 'bold',
   textAlign: 'center',
+  '@media (min-width: 500px)': {
+    fontSize: '4em',
+  },
 });
 
 const HeaderText = () => (

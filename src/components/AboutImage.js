@@ -6,8 +6,9 @@ const imgStyle = css({
   maxWidth: '100%',
   height: 180,
   borderRadius: 80,
-  border: '5px solid grey',
-  // boxShadow: '2px 2px 2px 0px pink',
+  '@media (min-width: 500px)': {
+    height: 250,
+  },
 });
 
 const AboutImage = () => (
