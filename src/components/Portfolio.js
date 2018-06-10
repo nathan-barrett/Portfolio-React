@@ -165,7 +165,7 @@ class Portfolio extends Component {
               <h2>For Dogs Only</h2>
               <p>React Native / Redux</p>
               <div className={hiddenText}>
-                <h4>A mobile application made with React Native where the user can set up doggie dates with other users.</h4>
+                <h4>A React Native mobile application with state management with Redux where the user can set up dog play dates with other users.</h4>
                 <button><a href="https://github.com/nathan-barrett/ForDogsOnly" target="_blank" rel="noopener noreferrer">View Repository</a></button>
               </div>
             </TextContainer>
@@ -179,7 +179,7 @@ class Portfolio extends Component {
               <h2>Plantigotchi</h2>
               <p>C++ with Arduino</p>
               <div className={hiddenText}>
-                <h4>An IOT arduino application that tracks house plant moisture level for the Women Who Code 2018 Hackathon. Recived 2nd place.</h4>
+                <h4>An IOT arduino application that tracks house plant moisture level. Received second place at the Women Who Code IOT Hackathon, 2018.</h4>
                 <button><a href="https://github.com/pnw-cha/plantigotchi" target="_blank" rel="noopener noreferrer">View Repository</a></button>
               </div>
             </TextContainer>
@@ -190,10 +190,10 @@ class Portfolio extends Component {
             <TextContainer
               background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/battle.png?raw=true")'
             >
-              <h2>Pokemon JS</h2>
+              <h2>Pok‌&#233;mon JS</h2>
               <p>Angular 5</p>
               <div className={hiddenText}>
-                <h4>An application made in Angular where the user can play a pokemon simulator</h4>
+                <h4>An Angular application where the user can play a Pok‌&#233;mon simulator.</h4>
                 <button><a href="https://github.com/nathan-barrett/PokemonJS" target="_blank" rel="noopener noreferrer">View Repository</a></button>
               </div>
             </TextContainer>
@@ -207,7 +207,7 @@ class Portfolio extends Component {
               <h2>Animal Town</h2>
               <p>SCSS / CSS</p>
               <div className={hiddenText}>
-                <h4>Web application created using HTML canvas and SCSS. Character creator like Animal Crossing.</h4>
+                <h4>Web application created using HTML canvas and SCSS where the user creates a charcter from Animal Crossing.</h4>
                 <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
               </div>
             </TextContainer>
@@ -221,7 +221,7 @@ class Portfolio extends Component {
               <h2>Zoo Zone</h2>
               <p>Angular 5</p>
               <div className={hiddenText}>
-                <h4>Web application using Angualr with CRUD functionality - where user can track zoo animals.</h4>
+                <h4>An angular application with CRUD functionality where user can track zoo animals.</h4>
                 <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
               </div>
             </TextContainer>
@@ -235,7 +235,7 @@ class Portfolio extends Component {
               <h2>Guede-Tomagatchi</h2>
               <p>React</p>
               <div className={hiddenText}>
-                <h4>Web aplication where user takes care of a Tomagatchi using React.</h4>
+                <h4>A React aplication where user takes care of a Guedetama-themed Tomagatchi</h4>
                 <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
               </div>
             </TextContainer>
