@@ -119,6 +119,8 @@ const hiddenText = css({
     outline: 'none',
     a: {
       color: 'inherit',
+      textDecoration: 'none',
+      fontWeight: 'bold',
     },
     '&:before, &:after': {
       backgroundColor: 'white',
