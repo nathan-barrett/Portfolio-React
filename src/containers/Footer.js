@@ -29,6 +29,7 @@ const IconContainer = styled('div')({
     fontFamily: '"Raleway", sans-serif',
     color: '#90D3E3',
     marginBottom: 0,
+    marginTop: 0,
   },
 });
 

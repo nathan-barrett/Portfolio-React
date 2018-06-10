@@ -9,7 +9,7 @@ const NavContainer = css({
   padding: 0,
   marginTop: 5,
   li: {
-    color: 'grey',
+    color: '#4183C4',
     fontSize: '1.2em',
     paddingLeft: 5,
     paddingRight: 5,
@@ -22,9 +22,9 @@ const NavContainer = css({
 
 const Navbar = () => (
   <ul className={NavContainer}>
-    <li><Link to="/">about</Link></li>
-    <li><Link to="/portfolio">portfolio</Link></li>
-    <li><Link to="/contact">contact</Link></li>
+    <li><Link style={{ textDecoration: 'none', color: 'inherit' }} to="/">about</Link></li>
+    <li><Link style={{ textDecoration: 'none', color: 'inherit' }} to="/portfolio">portfolio</Link></li>
+    <li><Link style={{ textDecoration: 'none', color: 'inherit' }} to="/contact">contact</Link></li>
   </ul>
 );
 

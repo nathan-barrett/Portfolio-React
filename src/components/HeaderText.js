@@ -8,7 +8,7 @@ const HeaderName = styled('h1')({
   fontFamily: '"Raleway", sans-serif',
   letterSpacing: '1px',
   fontSize: '2.5em',
-  paddingTop: 20,
+  marginTop: 0,
   marginBottom: 5,
   fontWeight: 'bold',
   textAlign: 'center',
@@ -18,7 +18,7 @@ const HeaderName = styled('h1')({
 });
 
 const HeaderText = () => (
-  <Link to="/"><HeaderName>Nathan Barrett</HeaderName></Link>
+  <Link style={{ textDecoration: 'none' }} to="/"><HeaderName>Nathan Barrett</HeaderName></Link>
 );
 
 export default HeaderText;

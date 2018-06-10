@@ -96,7 +96,7 @@ const TextContainer = styled('div')(props => ({
 }));
 
 const hiddenText = css({
-  paddingTop: 30,
+  paddingTop: 10,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

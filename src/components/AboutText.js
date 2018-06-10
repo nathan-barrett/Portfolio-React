@@ -27,6 +27,7 @@ const TextContainer = styled('div')({
   },
   '@media (min-width: 500px)': {
     width: '50%',
+    marginTop: 5,
   },
 });
 
