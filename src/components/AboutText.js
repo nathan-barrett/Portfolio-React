@@ -31,7 +31,10 @@ const TextContainer = styled('div')({
 });
 /*eslint-disable */
 const handleUpdates = () => {
-  console.log(UA);
+  UA.then((sdk) => {
+    sdk.register(); // Returns Channel object
+    console.log(sdk);
+  });
 };
 /* eslint-enable */
 
