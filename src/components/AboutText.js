@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { P } from '../../node_modules/glamorous';
 
 const TextContainer = styled('div')({
   marginTop: 15,
@@ -29,6 +30,12 @@ const TextContainer = styled('div')({
   },
 });
 
+const handleUpdates = () => {
+  UA.then((sdk) => {
+    sdk.register(); // Returns Channel object
+  });
+};
+
 const AboutText = () => (
   <TextContainer>
     <p>
@@ -36,7 +43,7 @@ const AboutText = () => (
       usable applications.
     </p>
     <p> I strive to learn more and understand new and emerging technologies.</p>
-    <button>Click here to Receive Updates</button>
+    <button onClick={handleUpdates}>Click here to Receive Updates</button>
   </TextContainer>
 );
 
