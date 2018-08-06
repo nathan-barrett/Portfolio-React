@@ -5,33 +5,23 @@
     "browser": true,
     "es6": true
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "rules": {
     "import/no-unresolved": 0,
-    "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
+    "jsx-a11y/anchor-is-valid": ["error", { "components": ["Link"], "specialLink": ["to"] }],
     "react/prefer-stateless-function": 0,
     "import/prefer-default-export": 0,
     "class-methods-use-this": 0,
+    "no-undef": 0,
     "max-len": 0,
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
-    "react/forbid-prop-types": [
-      0
-    ],
-    "react/require-default-props": [
-      0
-    ],
-    "global-require": [
-      0
-    ]
+    "react/forbid-prop-types": [0],
+    "react/require-default-props": [0],
+    "global-require": [0]
   }
 }

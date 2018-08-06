@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { P } from '../../node_modules/glamorous';
+// import { P } from '../../node_modules/glamorous';
 
 const TextContainer = styled('div')({
   marginTop: 15,
@@ -29,12 +29,11 @@ const TextContainer = styled('div')({
     marginTop: 5,
   },
 });
-
+/*eslint-disable */
 const handleUpdates = () => {
-  UA.then((sdk) => {
-    sdk.register(); // Returns Channel object
-  });
+  console.log(UA);
 };
+/* eslint-enable */
 
 const AboutText = () => (
   <TextContainer>
