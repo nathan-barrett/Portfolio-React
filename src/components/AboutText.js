@@ -22,6 +22,7 @@ const TextContainer = styled('div')({
       marginBottom: 2,
     },
   },
+  button: {},
   '@media (min-width: 500px)': {
     width: '50%',
     marginTop: 5,
@@ -35,6 +36,7 @@ const AboutText = () => (
       usable applications.
     </p>
     <p> I strive to learn more and understand new and emerging technologies.</p>
+    <button>Click here to Receive Updates</button>
   </TextContainer>
 );
 
