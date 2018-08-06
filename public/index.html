@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -19,14 +20,32 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Nathan Barrett</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
+  <script type="text/javascript">
+    // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1533503323.01
+    !function (n, t, c, e, u) {
+      function r(n) { try { f = n(u) } catch (n) { return h = n, void i(p, n) } i(s, f) } function i(n, t) {
+        for (var c = 0; c < n.length; c++)d(n[c], t);
+      } function o(n, t) { return n && (f ? d(n, f) : s.push(n)), t && (h ? d(t, h) : p.push(t)), l } function a(n) { return o(!1, n) } function d(t, c) {
+        n.setTimeout(function () { t(c) }, 0)
+      } var f, h, s = [], p = [], l = { then: o, catch: a, _setup: r }; n[e] = l; var v = t.createElement("script");
+      v.src = c, v.async = !0, v.id = "_uasdk", v.rel = e, t.head.appendChild(v)
+    }(window, document, 'https://web-sdk.urbanairship.com/notify/v1/ua-sdk.min.js',
+      'UA', {
+        appKey: '1OBe2ZN8THSjt-cMlpcG2w',
+        token: 'MToxT0JlMlpOOFRIU2p0LWNNbHBjRzJ3OlBLMmRIc3dmQ3FtX0xvaVN2aXlURlcyOUFlWTBxVmhIMkVValUyWTVqMlU',
+        vapidPublicKey: 'BOiBC7dUILbCoPT-mkOZj9R-D1BOUopwEpE5GorVZBvh0L66r1Xxg6XnTOE1K3vwzdo1l4b0CMcdVRZCtiWhMzs='
+      });
+
+  </script>
+  <title>Nathan Barrett</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -36,5 +55,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
