@@ -29,15 +29,6 @@ const TextContainer = styled('div')({
     marginTop: 5,
   },
 });
-/*eslint-disable */
-const handleUpdates = () => {
-  UA.then(function(sdk) {
-    console.log(sdk.channel.id);
-  }).catch(function(err) {
-    console.log(err);
-  });
-};
-/* eslint-enable */
 
 const AboutText = () => (
   <TextContainer>
@@ -46,7 +37,6 @@ const AboutText = () => (
       usable applications.
     </p>
     <p> I strive to learn more and understand new and emerging technologies.</p>
-    <button onClick={handleUpdates}>Click here to Receive Updates</button>
   </TextContainer>
 );
 

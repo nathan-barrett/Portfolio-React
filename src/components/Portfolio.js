@@ -7,7 +7,6 @@ import styled from 'react-emotion';
 import SectionText from './SectionText';
 // import MyButton from './Button';
 
-
 const sectionStyle = css({
   alignItems: 'center',
   display: 'flex',
@@ -106,139 +105,146 @@ const hiddenText = css({
     color: 'white',
     fontWeight: 'bold',
   },
-  button: {
-    position: 'relative',
-    transition: 'all 0.2s',
-    width: '80%',
-    borderRadius: 16,
-    backgroundColor: 'transparent',
-    color: 'white',
-    height: 40,
-    border: '2px solid white',
-    marginTop: 25,
-    outline: 'none',
-    a: {
-      color: 'inherit',
-      textDecoration: 'none',
-      fontWeight: 'bold',
-    },
-    '&:before, &:after': {
-      backgroundColor: 'white',
-      borderRadius: 10,
-      content: '" "',
-      position: 'absolute',
-      zIndex: -1,
-    },
-    '&:hover': {
-      color: '#90D3E3',
-      '&:after': {
-        height: '100%',
-        left: 0,
-        top: 0,
-        width: '100%',
-      },
-    },
-    '&:after': {
-      transition: 'all 0.3s',
-      height: 0,
-      left: '50%',
-      top: '50%',
-      width: 0,
-    },
-
-  },
 });
 
+const hiddenButton = css({
+  position: 'absolute',
+  transition: 'all 0.2s',
+  width: '80%',
+  borderRadius: 16,
+  backgroundColor: 'transparent',
+  color: 'white',
+  height: 40,
+  border: '2px solid white',
+  marginTop: 25,
+  outline: 'none',
+  bottom: 25,
+  a: {
+    color: 'inherit',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+  },
+  '&:before, &:after': {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    content: '" "',
+    position: 'absolute',
+    zIndex: -1,
+  },
+  '&:hover': {
+    color: '#90D3E3',
+    '&:after': {
+      height: '100%',
+      left: 0,
+      top: 0,
+      width: '100%',
+    },
+  },
+  '&:after': {
+    transition: 'all 0.3s',
+    height: 0,
+    left: '50%',
+    top: '50%',
+    width: 0,
+  },
+});
 
 class Portfolio extends Component {
   render() {
     return (
       <div>
-        <SectionText
-          text="Portfolio"
-        />
+        <SectionText text="Portfolio" />
         <div className={sectionStyle}>
-          <ImageContainer
-            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true")'
-          >
-            <TextContainer
-              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true")'
-            >
+          <ImageContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true&quot;)">
+            <TextContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/FiDO.png?raw=true&quot;)">
               <h2>For Dogs Only</h2>
               <p>React Native / Redux</p>
               <div className={hiddenText}>
-                <h4>A React Native mobile application with state management with Redux where the user can set up dog play dates with other users.</h4>
-                <button><a href="https://github.com/nathan-barrett/ForDogsOnly" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+                <h4>
+                  A React Native mobile application with state management with Redux where the user can set up dog play
+                  dates with other users.
+                </h4>
+                <button className={hiddenButton}>
+                  <a href="https://github.com/nathan-barrett/ForDogsOnly" target="_blank" rel="noopener noreferrer">
+                    View Repository
+                  </a>
+                </button>
               </div>
             </TextContainer>
           </ImageContainer>
-          <ImageContainer
-            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/plantigotchi.jpg?raw=true")'
-          >
-            <TextContainer
-              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/plantigotchi.jpg?raw=true")'
-            >
+          <ImageContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/plantigotchi.jpg?raw=true&quot;)">
+            <TextContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/plantigotchi.jpg?raw=true&quot;)">
               <h2>Plantigotchi</h2>
               <p>C++ with Arduino</p>
               <div className={hiddenText}>
-                <h4>An IOT arduino application that tracks house plant moisture level. Received second place at the Women Who Code IOT Hackathon, 2018.</h4>
-                <button><a href="https://github.com/pnw-cha/plantigotchi" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+                <h4>
+                  An IOT arduino application that tracks house plant moisture level. Received second place at the Women
+                  Who Code IOT Hackathon, 2018.
+                </h4>
+                <button className={hiddenButton}>
+                  <a href="https://github.com/pnw-cha/plantigotchi" target="_blank" rel="noopener noreferrer">
+                    View Repository
+                  </a>
+                </button>
               </div>
             </TextContainer>
           </ImageContainer>
-          <ImageContainer
-            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/battle.png?raw=true")'
-          >
-            <TextContainer
-              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/battle.png?raw=true")'
-            >
+          <ImageContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/battle.png?raw=true&quot;)">
+            <TextContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/battle.png?raw=true&quot;)">
               <h2>Pok‌&#233;mon JS</h2>
               <p>Angular 5</p>
               <div className={hiddenText}>
                 <h4>An Angular application where the user can play a Pok‌&#233;mon simulator.</h4>
-                <button><a href="https://github.com/nathan-barrett/PokemonJS" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+                <button className={hiddenButton}>
+                  <a href="https://github.com/nathan-barrett/PokemonJS" target="_blank" rel="noopener noreferrer">
+                    View Repository
+                  </a>
+                </button>
               </div>
             </TextContainer>
           </ImageContainer>
-          <ImageContainer
-            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Portfolio.png?raw=true")'
-          >
-            <TextContainer
-              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Portfolio.png?raw=true")'
-            >
+          <ImageContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Portfolio.png?raw=true&quot;)">
+            <TextContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Portfolio.png?raw=true&quot;)">
               <h2>Animal Town</h2>
               <p>SCSS / CSS</p>
               <div className={hiddenText}>
-                <h4>Web application created using HTML canvas and SCSS where the user creates a charcter from Animal Crossing.</h4>
-                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+                <h4>
+                  Web application created using HTML canvas and SCSS where the user creates a charcter from Animal
+                  Crossing.
+                </h4>
+                <button className={hiddenButton}>
+                  <a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">
+                    View Repository
+                  </a>
+                </button>
               </div>
             </TextContainer>
           </ImageContainer>
-          <ImageContainer
-            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/zoo.png?raw=true")'
-          >
-            <TextContainer
-              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/zoo.png?raw=true")'
-            >
+          <ImageContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/zoo.png?raw=true&quot;)">
+            <TextContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/zoo.png?raw=true&quot;)">
               <h2>Zoo Zone</h2>
               <p>Angular 5</p>
               <div className={hiddenText}>
                 <h4>An angular application with CRUD functionality where user can track zoo animals.</h4>
-                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+                <button className={hiddenButton}>
+                  <a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">
+                    View Repository
+                  </a>
+                </button>
               </div>
             </TextContainer>
           </ImageContainer>
-          <ImageContainer
-            background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Tomagatchi.png?raw=true")'
-          >
-            <TextContainer
-              background='url("https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Tomagatchi.png?raw=true")'
-            >
+          <ImageContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Tomagatchi.png?raw=true&quot;)">
+            <TextContainer background="url(&quot;https://github.com/nathan-barrett/Portfolio-React/blob/master/src/Tomagatchi.png?raw=true&quot;)">
               <h2>Guede-Tomagatchi</h2>
               <p>React</p>
               <div className={hiddenText}>
                 <h4>A React aplication where user takes care of a Guedetama-themed Tomagatchi</h4>
-                <button><a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">View Repository</a></button>
+                <button className={hiddenButton}>
+                  <a href="https://github.com/nathan-barrett/Animal-Town" target="_blank" rel="noopener noreferrer">
+                    View Repository
+                  </a>
+                </button>
               </div>
             </TextContainer>
           </ImageContainer>
@@ -247,6 +253,5 @@ class Portfolio extends Component {
     );
   }
 }
-
 
 export default Portfolio;
